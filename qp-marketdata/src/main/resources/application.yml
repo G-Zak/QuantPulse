@@ -1,0 +1,188 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: qp-marketdata
+
+  # dev by default: fixtures, no real API calls. Only the live profile spends quota.
+  profiles:
+    default: dev
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5434}/${POSTGRES_DB:quantpulse}
+    username: ${MARKET_DB_USER:qp_market}
+    password: ${MARKET_DB_PASSWORD:qp_market_dev}
+    hikari:
+      maximum-pool-size: 10
+      # Fail fast instead of waiting for a free connection.
+      connection-timeout: 5000
+      pool-name: qp-market-pool
+
+  jpa:
+    open-in-view: false  # see note below
+    hibernate:
+      ddl-auto: validate  # Flyway creates the schema, Hibernate only checks it
+    properties:
+      hibernate:
+        default_schema: market
+        jdbc:
+          batch_size: 50
+          time_zone: UTC
+        order_inserts: true
+        order_updates: true
+
+  flyway:
+    enabled: true
+    schemas: market
+    default-schema: market
+    baseline-on-migrate: true
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:quantpulse}
+    password: ${RABBITMQ_PASSWORD:qp_local_dev}
+    publisher-confirm-type: correlated  # needed for the confirm callback
+    publisher-returns: true  # needed for the returns callback
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6380}
+      timeout: 2s
+
+quantpulse:
+  drahmi:
+    base-url: ${DRAHMI_BASE_URL:https://api.drahmi.app/api/v1}
+    api-key: ${DRAHMI_API_KEY:}
+    timeout-seconds: 20
+
+  quota:
+    daily-limit: ${QUOTA_DAILY_LIMIT:100}
+
+  # Second API: FX rates and world benchmarks. It doesn't cover Casablanca, so it never
+  # replaces Drahmi. Own key, own 25/day budget, own circuit breaker.
+  alphavantage:
+    base-url: ${ALPHA_BASE_URL:https://www.alphavantage.co}
+    api-key: ${ALPHA_API_KEY:}
+    timeout-seconds: 20
+    daily-limit: ${ALPHA_DAILY_LIMIT:25}
+    fx-pairs: USD-MAD,EUR-MAD,MAD-USD,MAD-EUR  # both directions, we never invert
+    fx-history-min-rows: 200  # stop backfilling once a pair has this many days
+    fx-stale-after-days: 4  # older than this is shown as stale
+    benchmarks: SPY,EEM  # S&P 500 and MSCI Emerging Markets ETFs, in USD
+    fx-cron: "0 30 1 * * *"  # after the Drahmi night job
+
+  cache:
+    # Same as the ~15 min data delay, refreshing sooner gets nothing new.
+    ttl-minutes: 15
+    max-size: 5000
+
+  market:
+    open: "09:30"
+    close: "15:30"
+
+  ingestion:
+    snapshot-ms: 900000  # 15 min, same as the data delay
+    initial-delay-ms: 10000
+    close-cron: "0 45 15 * * MON-FRI"
+    nightly-cron: "0 15 1 * * *"
+
+  backfill:
+    per-run: 3  # 3 calls a night, all 81 instruments done in about 4 weeks
+
+  outbox:
+    poll-ms: 1000
+    batch-size: 100
+    purge-cron: "0 30 2 * * *"
+
+  fixtures:
+    location: ${FIXTURES_LOCATION:file:../ops/fixtures/}
+    simulate-drift: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,circuitbreakers,circuitbreakerevents
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+  metrics:
+    tags:
+      application: qp-marketdata
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      drahmi:
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 10
+        minimum-number-of-calls: 5  # don't judge the API on a single failure
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 60s
+        permitted-number-of-calls-in-half-open-state: 2
+        automatic-transition-from-open-to-half-open-enabled: true
+        register-health-indicator: true
+        # Our own quota refusal isn't an API failure. Counting it would open the breaker
+        # every time the budget gets low.
+        ignore-exceptions:
+          - com.quantpulse.marketdata.upstream.DrahmiHttpProvider$QuotaExhaustedException
+
+      # Separate breaker so an Alpha Vantage outage doesn't affect Drahmi.
+      # Smaller window because there are only a few calls a day.
+      alphavantage:
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 4
+        minimum-number-of-calls: 2
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10m
+        permitted-number-of-calls-in-half-open-state: 1
+        automatic-transition-from-open-to-half-open-enabled: true
+        register-health-indicator: true
+        # A 200 with an error message means our key or request is wrong, the API is fine.
+        ignore-exceptions:
+          - com.quantpulse.marketdata.upstream.AlphaVantageHttpClient$QuotaExhaustedException
+          - com.quantpulse.marketdata.upstream.AlphaVantageHttpClient$UpstreamRefusedException
+          - com.quantpulse.marketdata.upstream.AlphaVantageHttpClient$UpstreamRejectedException
+
+  retry:
+    instances:
+      drahmi:
+        max-attempts: 3
+        wait-duration: 2s
+        exponential-backoff-multiplier: 2
+        # Random jitter so clients don't all retry at the same moment.
+        randomized-wait-factor: 0.5
+        retry-exceptions:
+          - java.io.IOException
+          - java.net.SocketTimeoutException
+          - org.springframework.web.client.ResourceAccessException
+          - com.quantpulse.marketdata.upstream.DrahmiHttpProvider$UpstreamServerException
+        ignore-exceptions:
+          # Retrying these won't work and each attempt costs a call.
+          - com.quantpulse.marketdata.upstream.DrahmiHttpProvider$QuotaExhaustedException
+          - com.quantpulse.marketdata.upstream.DrahmiHttpProvider$UpstreamRateLimitedException
+
+      alphavantage:
+        max-attempts: 2  # one retry only, calls are limited
+        wait-duration: 5s
+        randomized-wait-factor: 0.5
+        retry-exceptions:
+          - java.io.IOException
+          - java.net.SocketTimeoutException
+          - org.springframework.web.client.ResourceAccessException
+          - com.quantpulse.marketdata.upstream.AlphaVantageHttpClient$UpstreamServerException
+        ignore-exceptions:
+          - com.quantpulse.marketdata.upstream.AlphaVantageHttpClient$QuotaExhaustedException
+          - com.quantpulse.marketdata.upstream.AlphaVantageHttpClient$UpstreamRefusedException
+          - com.quantpulse.marketdata.upstream.AlphaVantageHttpClient$UpstreamRejectedException
+
+logging:
+  level:
+    com.quantpulse: INFO
+    org.springframework.amqp: WARN

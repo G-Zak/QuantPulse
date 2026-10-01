@@ -1,0 +1,19 @@
+{
+  "id": 822,
+  "ticker": "ATW",
+  "name": "ATTIJARIWAFA BANK",
+  "isin": "MA0000012445",
+  "sector": "BANQU",
+  "exchange": "Bourse de Casablanca",
+  "currency": "MAD",
+  "price": 683,
+  "change": 0,
+  "marketCap": 146941193037,
+  "dividendYield": 3.01,
+  "peRatio": 14.76,
+  "beta": null,
+  "volume24h": 8669226.38095238,
+  "week52High": 804,
+  "week52Low": 355.05,
+  "updatedAt": "2026-08-03T12:25:04.384Z"
+}

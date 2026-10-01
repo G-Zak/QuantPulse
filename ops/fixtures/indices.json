@@ -1,0 +1,20 @@
+[
+  {
+    "code": "MASI",
+    "name": "Moroccan All Shares Index",
+    "value": 17843.7,
+    "changePercent": 0.5859,
+    "changeValue": 103.93,
+    "changeSource": "stored",
+    "updatedAt": "2026-08-02T20:08:49.292Z"
+  },
+  {
+    "code": "MASI20",
+    "name": "Moroccan All Shares Index 20",
+    "value": 1317.55,
+    "changePercent": 0.7481,
+    "changeValue": 9.78,
+    "changeSource": "stored",
+    "updatedAt": "2026-08-02T20:08:49.292Z"
+  }
+]

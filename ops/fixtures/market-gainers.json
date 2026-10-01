@@ -1,0 +1,184 @@
+{
+  "items": [
+    {
+      "ticker": "ZDJ",
+      "name": "ZELLIDJA S.A",
+      "price": 267.25,
+      "change": 9.9794,
+      "sector": "SDPH",
+      "currency": "MAD",
+      "marketCap": 168131181.5
+    },
+    {
+      "ticker": "WAA",
+      "name": "WAFA ASSURANCE",
+      "price": 5350,
+      "change": 3.8835,
+      "sector": "ASSUR",
+      "currency": "MAD",
+      "marketCap": 18725000000
+    },
+    {
+      "ticker": "CAP",
+      "name": "CASH PLUS S.A",
+      "price": 243,
+      "change": 3.2724,
+      "sector": "SDFEAAF",
+      "currency": "MAD",
+      "marketCap": 5966400870
+    },
+    {
+      "ticker": "MAB",
+      "name": "MAGHREBAIL",
+      "price": 929,
+      "change": 2.6406,
+      "sector": "SDFEAAF",
+      "currency": "MAD",
+      "marketCap": 1285905078
+    },
+    {
+      "ticker": "M2M",
+      "name": "M2M Group",
+      "price": 394,
+      "change": 2.6042,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "marketCap": 255224138
+    },
+    {
+      "ticker": "CDM",
+      "name": "CDM",
+      "price": 994,
+      "change": 2.3687,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "marketCap": 11556740006
+    },
+    {
+      "ticker": "TQM",
+      "name": "TAQA MOROCCO",
+      "price": 1750,
+      "change": 2.3392,
+      "sector": "ELECT",
+      "currency": "MAD",
+      "marketCap": 40808177660
+    },
+    {
+      "ticker": "CSR",
+      "name": "COSUMAR",
+      "price": 185.9,
+      "change": 2.1978,
+      "sector": "AEP",
+      "currency": "MAD",
+      "marketCap": 17574608598
+    },
+    {
+      "ticker": "FBR",
+      "name": "FENIE BROSSETTE",
+      "price": 273.3,
+      "change": 2.0157,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "marketCap": 393274327.2
+    },
+    {
+      "ticker": "LHM",
+      "name": "Holcim Maroc S.A",
+      "price": 1769,
+      "change": 1.9009,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "marketCap": 41473294800
+    },
+    {
+      "ticker": "AFI",
+      "name": "AFRIC INDUSTRIES SA",
+      "price": 331.8,
+      "change": 1.6233,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "marketCap": 96778000
+    },
+    {
+      "ticker": "BOA",
+      "name": "BANK OF AFRICA",
+      "price": 188,
+      "change": 1.5667,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "marketCap": 42073839271
+    },
+    {
+      "ticker": "AFM",
+      "name": "AFMA",
+      "price": 1278,
+      "change": 1.4286,
+      "sector": "ASSUR",
+      "currency": "MAD",
+      "marketCap": 1278000000
+    },
+    {
+      "ticker": "CTM",
+      "name": "CTM",
+      "price": 880,
+      "change": 1.3825,
+      "sector": "TRANS",
+      "currency": "MAD",
+      "marketCap": 1078860640
+    },
+    {
+      "ticker": "MOX",
+      "name": "MAGHREB OXYGENE",
+      "price": 370,
+      "change": 1.3699,
+      "sector": "CHIMI",
+      "currency": "MAD",
+      "marketCap": 300625000
+    },
+    {
+      "ticker": "TMA",
+      "name": "TOTALENERGIES MARKETING MAROC",
+      "price": 1505,
+      "change": 1.3245,
+      "sector": "PEG",
+      "currency": "MAD",
+      "marketCap": 13744640000
+    },
+    {
+      "ticker": "COL",
+      "name": "COLORADO",
+      "price": 79,
+      "change": 1.2821,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "marketCap": 1281188898.39
+    },
+    {
+      "ticker": "RDS",
+      "name": "RESIDENCES DAR SAADA",
+      "price": 169,
+      "change": 1.1673,
+      "sector": "PEPI",
+      "currency": "MAD",
+      "marketCap": 4503990872.5
+    },
+    {
+      "ticker": "REB",
+      "name": "REBAB COMPANY",
+      "price": 91,
+      "change": 1.0662,
+      "sector": "MINES",
+      "currency": "MAD",
+      "marketCap": 16057496
+    },
+    {
+      "ticker": "NKL",
+      "name": "ENNAKL",
+      "price": 49.25,
+      "change": 1.0309,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "marketCap": 1470000000
+    }
+  ]
+}

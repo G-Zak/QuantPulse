@@ -1,0 +1,19 @@
+{
+  "correlation": 0.8724571660638155,
+  "beta": 0.9149,
+  "volatility": 23.2293,
+  "maxDrawdown": 15.8121,
+  "riskLevel": "moderate",
+  "stockReturn": -9.3333,
+  "benchmarkReturn": -18.7277,
+  "relativePerformance": 9.3944,
+  "trend": "bearish",
+  "momentum": "moderate",
+  "positionVsSma200": -5.9063,
+  "period": "1Y",
+  "benchmark": "MASI20",
+  "startDate": "2025-08-03T13:15:43.664Z",
+  "endDate": "2026-08-03T13:15:43.664Z",
+  "dataPoints": 219,
+  "advancedDiagnostics": null
+}

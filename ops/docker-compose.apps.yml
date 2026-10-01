@@ -1,0 +1,146 @@
+# App services, on top of docker-compose.yml (infra).
+#
+#   docker compose --env-file ../.env up -d                                  # infra only
+#   docker compose -f docker-compose.yml -f docker-compose.apps.yml \
+#                  --env-file ../.env up -d --build                          # everything
+#
+# Hostnames are compose service names since containers talk over the compose network.
+
+name: quantpulse
+
+services:
+  qp-marketdata:
+    build:
+      context: ..
+      dockerfile: ops/Dockerfile.java
+      args: { MODULE: qp-marketdata }
+    container_name: qp-marketdata
+    restart: unless-stopped
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      RABBITMQ_HOST: rabbitmq
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      RABBITMQ_USER: ${RABBITMQ_USER:-quantpulse}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:-qp_local_dev}
+      # Fixtures are copied into the image at build time.
+      FIXTURES_LOCATION: file:/app/fixtures/
+      DRAHMI_API_KEY: ${DRAHMI_API_KEY:-}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-dev}
+    volumes:
+      - ./fixtures:/app/fixtures:ro
+    ports: ["8081:8081"]
+    depends_on:
+      postgres: { condition: service_healthy }
+      rabbitmq: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+
+  qp-portfolio:
+    build:
+      context: ..
+      dockerfile: ops/Dockerfile.java
+      args: { MODULE: qp-portfolio }
+    container_name: qp-portfolio
+    restart: unless-stopped
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: ${RABBITMQ_USER:-quantpulse}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:-qp_local_dev}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      MARKETDATA_URL: http://qp-marketdata:8081
+    ports: ["8082:8082"]
+    depends_on:
+      postgres: { condition: service_healthy }
+      rabbitmq: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+
+  qp-alerts:
+    build:
+      context: ..
+      dockerfile: ops/Dockerfile.java
+      args: { MODULE: qp-alerts }
+    container_name: qp-alerts
+    restart: unless-stopped
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: ${RABBITMQ_USER:-quantpulse}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:-qp_local_dev}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    ports: ["8083:8083"]
+    depends_on:
+      postgres: { condition: service_healthy }
+      rabbitmq: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+
+  qp-quant:
+    build:
+      context: ../qp-quant
+    container_name: qp-quant
+    restart: unless-stopped
+    environment:
+      MARKETDATA_URL: http://qp-marketdata:8081
+      ALLOWED_ORIGINS: http://localhost:3002
+    ports: ["8084:8084"]
+    depends_on: [qp-marketdata]
+
+  qp-insights:
+    build:
+      context: ..
+      dockerfile: ops/Dockerfile.java
+      args: { MODULE: qp-insights }
+    container_name: qp-insights
+    restart: unless-stopped
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      MARKETDATA_URL: http://qp-marketdata:8081
+      ALERTS_URL: http://qp-alerts:8083
+      # Leave empty to turn AI off. The brief then uses the template.
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      INSIGHTS_MODEL: ${INSIGHTS_MODEL:-claude-sonnet-5}
+      INSIGHTS_DAILY_LIMIT: ${INSIGHTS_DAILY_LIMIT:-5}
+    ports: ["8085:8085"]
+    depends_on:
+      postgres: { condition: service_healthy }
+      qp-marketdata: { condition: service_started }
+
+  qp-api:
+    build:
+      context: ..
+      dockerfile: ops/Dockerfile.java
+      args: { MODULE: qp-api }
+    container_name: qp-api
+    restart: unless-stopped
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: ${RABBITMQ_USER:-quantpulse}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:-qp_local_dev}
+      MARKETDATA_URL: http://qp-marketdata:8081
+      PORTFOLIO_URL: http://qp-portfolio:8082
+      ALERTS_URL: http://qp-alerts:8083
+      QUANT_URL: http://qp-quant:8084
+      INSIGHTS_URL: http://qp-insights:8085
+      ALLOWED_ORIGINS: http://localhost:3002
+      JWT_SECRET: ${JWT_SECRET:-quantpulse-local-development-secret-key-change-me-please-32b+}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-quantpulse}
+    ports: ["8080:8080"]
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+
+  qp-web:
+    build:
+      context: ../qp-web
+    container_name: qp-web
+    restart: unless-stopped
+    environment:
+      # Read by the browser, set at build time.
+      NEXT_PUBLIC_API_URL: http://localhost:8080
+    ports: ["3002:3002"]
+    depends_on: [qp-api]

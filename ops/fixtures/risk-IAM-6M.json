@@ -1,0 +1,20 @@
+{
+  "data": {
+    "ticker": "IAM",
+    "range": "6M",
+    "realizedVolAnnualized": 0.19741612274653714,
+    "downsideVolAnnualized": 0.14624300710741656,
+    "maxDrawdown": 0.15779129620963975,
+    "var95": 0.01972778746237076,
+    "cvar95": 0.03021649851950118,
+    "beta": 0.6883820078970095,
+    "alpha": -0.2765495752503235
+  },
+  "metadata": {
+    "asOfDate": "2026-08-03",
+    "dataDelay": "T+1D",
+    "dataQualityScore": 100,
+    "normalized": true,
+    "methodologyVersion": "1.0.0"
+  }
+}

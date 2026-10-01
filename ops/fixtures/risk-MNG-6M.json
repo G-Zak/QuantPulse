@@ -1,0 +1,20 @@
+{
+  "data": {
+    "ticker": "MNG",
+    "range": "6M",
+    "realizedVolAnnualized": 0.6804873384909108,
+    "downsideVolAnnualized": 0.4594335282247457,
+    "maxDrawdown": 0.3314178362249972,
+    "var95": 0.06604370726289226,
+    "cvar95": 0.09252950814923908,
+    "beta": 1.588695616007612,
+    "alpha": 1.36463433759587
+  },
+  "metadata": {
+    "asOfDate": "2026-08-03",
+    "dataDelay": "T+1D",
+    "dataQualityScore": 100,
+    "normalized": true,
+    "methodologyVersion": "1.0.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "sectorAllocation": {
+    "BANQU": 0.47210077934645495,
+    "TÉLÉC": 0.1618310321588415,
+    "MINES": 0.3660681884947036
+  },
+  "top5Concentration": 1,
+  "estimatedVolAnnualized": 0.41500543467392287,
+  "betaVsMasi": 0.1394965285104882
+}

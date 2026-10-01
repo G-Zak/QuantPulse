@@ -1,0 +1,449 @@
+{
+  "market-overview": {
+    "method": "GET",
+    "path": "/market/overview",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:21Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "market-status": {
+    "method": "GET",
+    "path": "/market/status",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:22Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "stocks-all": {
+    "method": "GET",
+    "path": "/stocks?limit=200",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:23Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "sectors": {
+    "method": "GET",
+    "path": "/sectors",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:24Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "indices": {
+    "method": "GET",
+    "path": "/indices",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:24Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "index-MASI": {
+    "method": "GET",
+    "path": "/indices/MASI",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:25Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "index-MASI-history-1Y": {
+    "method": "GET",
+    "path": "/indices/MASI/history?range=1Y",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:26Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "index-MASI20-history-1Y": {
+    "method": "GET",
+    "path": "/indices/MASI20/history?range=1Y",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:27Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "market-gainers": {
+    "method": "GET",
+    "path": "/market/gainers?limit=20",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:27Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "market-losers": {
+    "method": "GET",
+    "path": "/market/losers?limit=20",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:28Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "market-most-active": {
+    "method": "GET",
+    "path": "/market/most-active?limit=20",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:29Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "news": {
+    "method": "GET",
+    "path": "/news?limit=20",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:30Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "search-bank": {
+    "method": "GET",
+    "path": "/search?q=bank&limit=20",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:31Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "stock-ATW": {
+    "method": "GET",
+    "path": "/stocks/ATW",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:31Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "stock-ATW-history-1Y": {
+    "method": "GET",
+    "path": "/stocks/ATW/history?range=1Y",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:32Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "technicals-ATW-6M": {
+    "method": "GET",
+    "path": "/intelligence/stocks/ATW/technicals?range=6M&includeMetadata=true",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:33Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "risk-ATW-6M": {
+    "method": "GET",
+    "path": "/intelligence/stocks/ATW/risk?range=6M&benchmark=MASI&includeMetadata=true",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:34Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "stock-IAM": {
+    "method": "GET",
+    "path": "/stocks/IAM",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:35Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "stock-IAM-history-1Y": {
+    "method": "GET",
+    "path": "/stocks/IAM/history?range=1Y",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:35Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "technicals-IAM-6M": {
+    "method": "GET",
+    "path": "/intelligence/stocks/IAM/technicals?range=6M&includeMetadata=true",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:36Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "risk-IAM-6M": {
+    "method": "GET",
+    "path": "/intelligence/stocks/IAM/risk?range=6M&benchmark=MASI&includeMetadata=true",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:37Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "stock-MNG": {
+    "method": "GET",
+    "path": "/stocks/MNG",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:38Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "stock-MNG-history-1Y": {
+    "method": "GET",
+    "path": "/stocks/MNG/history?range=1Y",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:38Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "technicals-MNG-6M": {
+    "method": "GET",
+    "path": "/intelligence/stocks/MNG/technicals?range=6M&includeMetadata=true",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:39Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "risk-MNG-6M": {
+    "method": "GET",
+    "path": "/intelligence/stocks/MNG/risk?range=6M&benchmark=MASI&includeMetadata=true",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:40Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "dividends-ATW": {
+    "method": "GET",
+    "path": "/stocks/ATW/dividends",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:41Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "ownership-ATW": {
+    "method": "GET",
+    "path": "/stocks/ATW/ownership?page=1&pageSize=10",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:41Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "sharia-ATW": {
+    "method": "GET",
+    "path": "/stocks/ATW/sharia-compliance?methodology=COMMON_INDEX",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:42Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "market-analysis-ATW": {
+    "method": "GET",
+    "path": "/stocks/ATW/market-analysis?benchmark=MASI20&period=1Y",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:43Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "fundamentals-ATW": {
+    "method": "GET",
+    "path": "/stocks/ATW/fundamentals?statementType=INCOME&periodType=ANNUAL",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:44Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "financials-ATW": {
+    "method": "GET",
+    "path": "/stocks/ATW/financials/summary",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:44Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "liquidity-ATW-3M": {
+    "method": "GET",
+    "path": "/intelligence/stocks/ATW/liquidity?range=3M",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:45Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "signals-ATW-3M": {
+    "method": "GET",
+    "path": "/intelligence/stocks/ATW/signals?range=3M",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:46Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "performance-ATW-1Y": {
+    "method": "GET",
+    "path": "/intelligence/stocks/ATW/performance?range=1Y&benchmark=MASI",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:47Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "portfolio-list": {
+    "method": "GET",
+    "path": "/portfolio",
+    "body": null,
+    "recordedAt": "2026-08-03T14:57:47Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "portfolio-summary-calc": {
+    "method": "POST",
+    "path": "/intelligence/portfolio/summary",
+    "body": {
+      "holdings": [
+        {
+          "ticker": "ATW",
+          "quantity": 100
+        },
+        {
+          "ticker": "IAM",
+          "quantity": 250
+        },
+        {
+          "ticker": "MNG",
+          "quantity": 40
+        }
+      ]
+    },
+    "recordedAt": "2026-08-03T14:58:14Z",
+    "asOf": null,
+    "dataDelay": null,
+    "qualityScore": null
+  },
+  "av-daily-IBM": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM",
+    "body": null,
+    "recordedAt": "2026-09-28T12:21:00Z",
+    "source": "alphavantage",
+    "synthetic": false,
+    "note": "Recorded verbatim with Alpha Vantage's public demo key; costs no quota on the project key."
+  },
+  "av-soft-failure-information": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=MAD",
+    "body": null,
+    "recordedAt": "2026-09-28T12:21:00Z",
+    "source": "alphavantage",
+    "synthetic": false,
+    "note": "Recorded verbatim: the demo key asked for an unsupported pair. HTTP 200 whose body is a message, not data."
+  },
+  "av-fx-USD-MAD": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=MAD",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Structure copied from a real demo-key USD/JPY response; the rate values are illustrative. Re-record with the project key (1 call each) before relying on the numbers."
+  },
+  "av-fx-EUR-MAD": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=EUR&to_currency=MAD",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Structure copied from a real demo-key USD/JPY response; the rate values are illustrative. Re-record with the project key (1 call each) before relying on the numbers."
+  },
+  "av-daily-SPY": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=SPY",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Generated by ops/tools/make_synthetic_av_fixtures.py (seeded random walk) in the real response shape. Record with ops/tools/record_alphavantage.py before relying on the numbers."
+  },
+  "av-daily-EEM": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=EEM",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Generated by ops/tools/make_synthetic_av_fixtures.py (seeded random walk) in the real response shape. Record with ops/tools/record_alphavantage.py before relying on the numbers."
+  },
+  "av-fxdaily-USD-MAD": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=FX_DAILY&from_symbol=USD&to_symbol=MAD",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Generated by ops/tools/make_synthetic_av_fixtures.py (seeded random walk) in the real response shape. Record with ops/tools/record_alphavantage.py before relying on the numbers."
+  },
+  "av-fxdaily-EUR-MAD": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=FX_DAILY&from_symbol=EUR&to_symbol=MAD",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Generated by ops/tools/make_synthetic_av_fixtures.py (seeded random walk) in the real response shape. Record with ops/tools/record_alphavantage.py before relying on the numbers."
+  },
+  "av-fxdaily-MAD-USD": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=FX_DAILY&from_symbol=MAD&to_symbol=USD",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Generated by ops/tools/make_synthetic_av_fixtures.py (seeded random walk) in the real response shape. Record with ops/tools/record_alphavantage.py before relying on the numbers."
+  },
+  "av-fxdaily-MAD-EUR": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=FX_DAILY&from_symbol=MAD&to_symbol=EUR",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Generated by ops/tools/make_synthetic_av_fixtures.py (seeded random walk) in the real response shape. Record with ops/tools/record_alphavantage.py before relying on the numbers."
+  },
+  "av-fx-MAD-USD": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=MAD&to_currency=USD",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Generated by ops/tools/make_synthetic_av_fixtures.py (seeded random walk) in the real response shape. Record with ops/tools/record_alphavantage.py before relying on the numbers."
+  },
+  "av-fx-MAD-EUR": {
+    "method": "GET",
+    "path": "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=MAD&to_currency=EUR",
+    "body": null,
+    "recordedAt": null,
+    "source": "alphavantage",
+    "synthetic": true,
+    "note": "NOT recorded. Generated by ops/tools/make_synthetic_av_fixtures.py (seeded random walk) in the real response shape. Record with ops/tools/record_alphavantage.py before relying on the numbers."
+  }
+}

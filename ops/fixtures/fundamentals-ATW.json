@@ -1,0 +1,168 @@
+{
+  "ticker": "ATW",
+  "statementType": "INCOME",
+  "periodType": "ANNUAL",
+  "currency": "MAD",
+  "unit": "UNIT",
+  "asOfDate": "2025-12-31",
+  "periods": [
+    {
+      "periodEnd": "2022-12-31",
+      "label": "déc. 2022"
+    },
+    {
+      "periodEnd": "2023-12-31",
+      "label": "déc. 2023"
+    },
+    {
+      "periodEnd": "2024-12-31",
+      "label": "déc. 2024"
+    },
+    {
+      "periodEnd": "2025-12-31",
+      "label": "déc. 2025"
+    }
+  ],
+  "selectedPeriodEnd": "2025-12-31",
+  "series": [
+    {
+      "key": "revenue",
+      "label": "Chiffre d'affaires",
+      "values": [
+        {
+          "periodEnd": "2022-12-31",
+          "value": 26313495000
+        },
+        {
+          "periodEnd": "2023-12-31",
+          "value": 29942723000
+        },
+        {
+          "periodEnd": "2024-12-31",
+          "value": 34507117000
+        },
+        {
+          "periodEnd": "2025-12-31",
+          "value": 34921384000
+        }
+      ]
+    },
+    {
+      "key": "operating_income",
+      "label": "Résultat d'exploitation",
+      "values": [
+        {
+          "periodEnd": "2022-12-31",
+          "value": 14594220000
+        },
+        {
+          "periodEnd": "2023-12-31",
+          "value": 17752949000
+        },
+        {
+          "periodEnd": "2024-12-31",
+          "value": 22043660000
+        },
+        {
+          "periodEnd": "2025-12-31",
+          "value": 21698811000
+        }
+      ]
+    }
+  ],
+  "table": [
+    {
+      "key": "revenue",
+      "label": "Chiffre d'affaires",
+      "isDerived": false,
+      "value": 34921384000,
+      "yoyPct": 0.012,
+      "values": [
+        {
+          "periodEnd": "2022-12-31",
+          "value": 26313495000
+        },
+        {
+          "periodEnd": "2023-12-31",
+          "value": 29942723000
+        },
+        {
+          "periodEnd": "2024-12-31",
+          "value": 34507117000
+        },
+        {
+          "periodEnd": "2025-12-31",
+          "value": 34921384000
+        }
+      ],
+      "yoyPctByPeriodEnd": {
+        "2022-12-31": null,
+        "2023-12-31": 0.1379,
+        "2024-12-31": 0.1524,
+        "2025-12-31": 0.012
+      }
+    },
+    {
+      "key": "operating_income",
+      "label": "Résultat d'exploitation",
+      "isDerived": false,
+      "value": 21698811000,
+      "yoyPct": -0.0156,
+      "values": [
+        {
+          "periodEnd": "2022-12-31",
+          "value": 14594220000
+        },
+        {
+          "periodEnd": "2023-12-31",
+          "value": 17752949000
+        },
+        {
+          "periodEnd": "2024-12-31",
+          "value": 22043660000
+        },
+        {
+          "periodEnd": "2025-12-31",
+          "value": 21698811000
+        }
+      ],
+      "yoyPctByPeriodEnd": {
+        "2022-12-31": null,
+        "2023-12-31": 0.2164,
+        "2024-12-31": 0.2417,
+        "2025-12-31": -0.0156
+      }
+    },
+    {
+      "key": "net_income",
+      "label": "Résultat net",
+      "isDerived": false,
+      "value": 10644852000,
+      "yoyPct": 0.12,
+      "values": [
+        {
+          "periodEnd": "2022-12-31",
+          "value": 6065282000
+        },
+        {
+          "periodEnd": "2023-12-31",
+          "value": 7507605000
+        },
+        {
+          "periodEnd": "2024-12-31",
+          "value": 9504486000
+        },
+        {
+          "periodEnd": "2025-12-31",
+          "value": 10644852000
+        }
+      ],
+      "yoyPctByPeriodEnd": {
+        "2022-12-31": null,
+        "2023-12-31": 0.2378,
+        "2024-12-31": 0.266,
+        "2025-12-31": 0.12
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: qp-insights
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5434}/${POSTGRES_DB:quantpulse}
+    username: ${INSIGHTS_DB_USER:qp_insights}
+    password: ${INSIGHTS_DB_PASSWORD:qp_insights_dev}
+    hikari:
+      maximum-pool-size: 4
+      connection-timeout: 5000
+      pool-name: qp-insights-pool
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: insights
+        jdbc:
+          time_zone: UTC
+
+  flyway:
+    enabled: true
+    schemas: insights
+    default-schema: insights
+    baseline-on-migrate: true
+
+quantpulse:
+  services:
+    marketdata: ${MARKETDATA_URL:http://localhost:8081}
+    alerts:     ${ALERTS_URL:http://localhost:8083}
+
+  insights:
+    # Every night, after the Alpha Vantage job at 01:30 UTC.
+    cron: "0 45 1 * * *"
+    # Max model calls per UTC day, manual regenerations included.
+    daily-limit: ${INSIGHTS_DAILY_LIMIT:5}
+
+  anthropic:
+    base-url: ${ANTHROPIC_BASE_URL:https://api.anthropic.com}
+    # Leave empty to turn AI off. The template brief is used instead.
+    api-key: ${ANTHROPIC_API_KEY:}
+    model: ${INSIGHTS_MODEL:claude-sonnet-5}
+    max-tokens: 900
+    timeout-seconds: 45
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      anthropic:
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 4
+        minimum-number-of-calls: 2
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 15m
+        permitted-number-of-calls-in-half-open-state: 1
+        automatic-transition-from-open-to-half-open-enabled: true
+        register-health-indicator: true
+        # A bad request is our bug, not an outage.
+        ignore-exceptions:
+          - com.quantpulse.insights.llm.ClaudeClient$LlmRejectedException
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: qp-insights
+
+logging:
+  level:
+    com.quantpulse: INFO

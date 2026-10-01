@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "ticker": "ATW",
+      "name": "ATTIJARIWAFA BANK",
+      "price": 683,
+      "change": 0,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "marketCap": 146941193037
+    },
+    {
+      "ticker": "BOA",
+      "name": "BANK OF AFRICA",
+      "price": 188,
+      "change": 1.5667,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "marketCap": 42073839271
+    },
+    {
+      "ticker": "CFG",
+      "name": "CFG BANK",
+      "price": 192,
+      "change": 0,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "marketCap": 6721528320
+    }
+  ]
+}

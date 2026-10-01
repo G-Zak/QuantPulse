@@ -1,0 +1,204 @@
+{
+  "items": [
+    {
+      "ticker": "IAM",
+      "name": "ITISSALAT AL-MAGHRIB",
+      "price": 93.65,
+      "change": 0,
+      "sector": "TÉLÉC",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 81755866620
+    },
+    {
+      "ticker": "CAP",
+      "name": "CASH PLUS S.A",
+      "price": 243,
+      "change": 3.2724,
+      "sector": "SDFEAAF",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 5966400870
+    },
+    {
+      "ticker": "CMA",
+      "name": "CIMENTS DU MAROC",
+      "price": 1669,
+      "change": 0,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 24093690676
+    },
+    {
+      "ticker": "CMG",
+      "name": "CMGP GROUP",
+      "price": 324,
+      "change": 0,
+      "sector": "IA",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 5508291600
+    },
+    {
+      "ticker": "RIS",
+      "name": "RISMA",
+      "price": 316.25,
+      "change": -1.375,
+      "sector": "LEH",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 5059833712
+    },
+    {
+      "ticker": "SID",
+      "name": "SONASID",
+      "price": 1950,
+      "change": 0.7752,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 7605000000
+    },
+    {
+      "ticker": "MSA",
+      "name": "SODEP-Marsa Maroc",
+      "price": 865,
+      "change": 0.3501,
+      "sector": "SDT",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 63120216000
+    },
+    {
+      "ticker": "CSR",
+      "name": "COSUMAR",
+      "price": 185.9,
+      "change": 2.1978,
+      "sector": "AEP",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 17574608598
+    },
+    {
+      "ticker": "DWY",
+      "name": "DISWAY",
+      "price": 778,
+      "change": 0,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 1419978786
+    },
+    {
+      "ticker": "CFG",
+      "name": "CFG BANK",
+      "price": 192,
+      "change": 0,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 6721528320
+    },
+    {
+      "ticker": "HPS",
+      "name": "HPS",
+      "price": 590,
+      "change": 0.678,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 4502963520
+    },
+    {
+      "ticker": "ADH",
+      "name": "DOUJA PROM ADDOHA",
+      "price": 35.75,
+      "change": 0,
+      "sector": "PEPI",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 14451590018.6
+    },
+    {
+      "ticker": "SNA",
+      "name": "STOKVIS NORD AFRIQUE",
+      "price": 67,
+      "change": 0,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 1185575050
+    },
+    {
+      "ticker": "AKT",
+      "name": "AKDITAL",
+      "price": 1147,
+      "change": 0,
+      "sector": "SANTÉ",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 16127336773
+    },
+    {
+      "ticker": "MNG",
+      "name": "MANAGEM",
+      "price": 1324,
+      "change": 0,
+      "sector": "MINES",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 158393424600
+    },
+    {
+      "ticker": "NKL",
+      "name": "ENNAKL",
+      "price": 49.25,
+      "change": 1.0309,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 1470000000
+    },
+    {
+      "ticker": "SOT",
+      "name": "SOTHEMA",
+      "price": 370,
+      "change": 0,
+      "sector": "IP",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 14174515000
+    },
+    {
+      "ticker": "T2S",
+      "name": "T2S GROUP HOLDING",
+      "price": 238,
+      "change": 0.042,
+      "sector": "SANTÉ",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 5189228446.8
+    },
+    {
+      "ticker": "ARD",
+      "name": "ARADEI CAPITAL",
+      "price": 432,
+      "change": -0.1866,
+      "sector": "SDPI",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 5404295900
+    },
+    {
+      "ticker": "CIH",
+      "name": "CIH",
+      "price": 345,
+      "change": 0,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "volume": 0,
+      "marketCap": 12283940280
+    }
+  ]
+}

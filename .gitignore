@@ -1,0 +1,61 @@
+# ── Secrets ─────────────────────────────────────────────
+# The Drahmi API key lives in .env and must never be committed.
+.env
+*.env
+!.env.example
+
+# ── Build output ────────────────────────────────────────
+target/
+!.mvn/wrapper/maven-wrapper.jar
+build/
+out/
+
+# ── Node / Next.js (qp-web) ─────────────────────────────
+node_modules/
+.next/
+.turbo/
+*.tsbuildinfo
+
+# ── IDE ─────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+.vscode/
+!.vscode/settings.json
+.settings/
+.classpath
+.project
+
+# ── OS ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Logs / runtime ──────────────────────────────────────
+*.log
+*.pid
+logs/
+
+# ── Local infra state ───────────────────────────────────
+ops/data/
+
+# ── Python ──────────────────────────────────────────────
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Personal study notes (kept locally, not published)
+docs/00-START-HERE.md
+docs/BUILD-GUIDE.md
+docs/CV-ENTRY.md
+docs/PROJECT-STATUS.md
+docs/api/
+docs/concepts/
+docs/interview/
+docs/labs/
+docs/reference/
+
+# Local tool files
+.claude/
+.kilo/

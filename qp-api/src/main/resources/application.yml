@@ -1,0 +1,54 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: qp-api
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:quantpulse}
+    password: ${RABBITMQ_PASSWORD:qp_local_dev}
+
+  # No database here, this service has no data of its own.
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+quantpulse:
+  services:
+    marketdata: ${MARKETDATA_URL:http://localhost:8081}
+    portfolio:  ${PORTFOLIO_URL:http://localhost:8082}
+    alerts:     ${ALERTS_URL:http://localhost:8083}
+    quant:      ${QUANT_URL:http://localhost:8084}
+    insights:   ${INSIGHTS_URL:http://localhost:8085}
+  security:
+    # HS256 needs at least 256 bits. Change it outside dev.
+    jwt-secret: ${JWT_SECRET:quantpulse-local-development-secret-key-change-me-please-32b+}
+    jwt-ttl-minutes: 30
+    jwt-issuer: quantpulse
+    allowed-origins: ${ALLOWED_ORIGINS:http://localhost:3002,http://localhost:3000}
+    demo-user: ${DEMO_USER:zakaria}
+    demo-password: ${DEMO_PASSWORD:quantpulse}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: qp-api
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    com.quantpulse: INFO

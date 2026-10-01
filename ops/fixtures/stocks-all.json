@@ -1,0 +1,735 @@
+{
+  "items": [
+    {
+      "ticker": "MNG",
+      "name": "MANAGEM",
+      "price": 1324,
+      "change": 0,
+      "sector": "MINES",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:35:30.996Z"
+    },
+    {
+      "ticker": "ATW",
+      "name": "ATTIJARIWAFA BANK",
+      "price": 683,
+      "change": 0,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T12:25:04.384Z"
+    },
+    {
+      "ticker": "IAM",
+      "name": "ITISSALAT AL-MAGHRIB",
+      "price": 93.65,
+      "change": 0,
+      "sector": "TÉLÉC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:40:26.612Z"
+    },
+    {
+      "ticker": "MSA",
+      "name": "SODEP-Marsa Maroc",
+      "price": 865,
+      "change": 0.3501,
+      "sector": "SDT",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T11:46:51.350Z"
+    },
+    {
+      "ticker": "BCP",
+      "name": "BCP",
+      "price": 248,
+      "change": 0,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "BOA",
+      "name": "BANK OF AFRICA",
+      "price": 188,
+      "change": 1.5667,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "LHM",
+      "name": "Holcim Maroc S.A",
+      "price": 1769,
+      "change": 1.9009,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "TQM",
+      "name": "TAQA MOROCCO",
+      "price": 1750,
+      "change": 2.3392,
+      "sector": "ELECT",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "GTM",
+      "name": "SGTM S.A",
+      "price": 670.1,
+      "change": 0.7312,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T09:26:03.126Z"
+    },
+    {
+      "ticker": "TGC",
+      "name": "TGCC S.A",
+      "price": 741.5,
+      "change": -0.6711,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T11:42:44.754Z"
+    },
+    {
+      "ticker": "CMA",
+      "name": "CIMENTS DU MAROC",
+      "price": 1669,
+      "change": 0,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T11:09:00.179Z"
+    },
+    {
+      "ticker": "WAA",
+      "name": "WAFA ASSURANCE",
+      "price": 5350,
+      "change": 3.8835,
+      "sector": "ASSUR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "CSR",
+      "name": "COSUMAR",
+      "price": 185.9,
+      "change": 2.1978,
+      "sector": "AEP",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T12:51:41.006Z"
+    },
+    {
+      "ticker": "AKT",
+      "name": "AKDITAL",
+      "price": 1147,
+      "change": 0,
+      "sector": "SANTÉ",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:38:02.971Z"
+    },
+    {
+      "ticker": "ADH",
+      "name": "DOUJA PROM ADDOHA",
+      "price": 35.75,
+      "change": 0,
+      "sector": "PEPI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:40:54.512Z"
+    },
+    {
+      "ticker": "SOT",
+      "name": "SOTHEMA",
+      "price": 370,
+      "change": 0,
+      "sector": "IP",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "TMA",
+      "name": "TOTALENERGIES MARKETING MAROC",
+      "price": 1505,
+      "change": 1.3245,
+      "sector": "PEG",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:42:40.736Z"
+    },
+    {
+      "ticker": "GAZ",
+      "name": "AFRIQUIA GAZ",
+      "price": 3636,
+      "change": -1.4367,
+      "sector": "PEG",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "CIH",
+      "name": "CIH",
+      "price": 345,
+      "change": 0,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T09:26:41.530Z"
+    },
+    {
+      "ticker": "SAH",
+      "name": "SANLAM MAROC",
+      "price": 2850,
+      "change": -1.7241,
+      "sector": "ASSUR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "CDM",
+      "name": "CDM",
+      "price": 994,
+      "change": 2.3687,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "LBV",
+      "name": "LABEL VIE",
+      "price": 3650,
+      "change": 0,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "SMI",
+      "name": "SMI",
+      "price": 5998,
+      "change": 0,
+      "sector": "MINES",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "LES",
+      "name": "LESIEUR CRISTAL",
+      "price": 306.9,
+      "change": -0.0326,
+      "sector": "AEP",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "ADI",
+      "name": "ALLIANCES",
+      "price": 365.1,
+      "change": -1.0569,
+      "sector": "PEPI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "BCI",
+      "name": "BMCI",
+      "price": 588,
+      "change": -0.339,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "SID",
+      "name": "SONASID",
+      "price": 1950,
+      "change": 0.7752,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T11:03:37.731Z"
+    },
+    {
+      "ticker": "ATL",
+      "name": "ATLANTASANAD",
+      "price": 123.75,
+      "change": 0.2024,
+      "sector": "ASSUR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "CMT",
+      "name": "MINIERE TOUISSIT",
+      "price": 0,
+      "change": 0,
+      "sector": "MINES",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "CFG",
+      "name": "CFG BANK",
+      "price": 192,
+      "change": 0,
+      "sector": "BANQU",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "JET",
+      "name": "JET CONTRACTORS",
+      "price": 2050,
+      "change": -0.4854,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "CAP",
+      "name": "CASH PLUS S.A",
+      "price": 243,
+      "change": 3.2724,
+      "sector": "SDFEAAF",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T10:09:51.248Z"
+    },
+    {
+      "ticker": "SBM",
+      "name": "SOCIETE DES BOISSONS DU MAROC",
+      "price": 2103,
+      "change": -2.9982,
+      "sector": "BOISS",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "NEJ",
+      "name": "AUTO NEJMA",
+      "price": 5400,
+      "change": 0,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "CMG",
+      "name": "CMGP GROUP",
+      "price": 324,
+      "change": 0,
+      "sector": "IA",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "ARD",
+      "name": "ARADEI CAPITAL",
+      "price": 432,
+      "change": -0.1866,
+      "sector": "SDPI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:43:05.924Z"
+    },
+    {
+      "ticker": "T2S",
+      "name": "T2S GROUP HOLDING",
+      "price": 238,
+      "change": 0.042,
+      "sector": "SANTÉ",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:38:45.728Z"
+    },
+    {
+      "ticker": "RIS",
+      "name": "RISMA",
+      "price": 316.25,
+      "change": -1.375,
+      "sector": "LEH",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T09:44:21.184Z"
+    },
+    {
+      "ticker": "DHO",
+      "name": "DELTA HOLDING",
+      "price": 54,
+      "change": -0.4425,
+      "sector": "SDPH",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "RDS",
+      "name": "RESIDENCES DAR SAADA",
+      "price": 169,
+      "change": 1.1673,
+      "sector": "PEPI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "HPS",
+      "name": "HPS",
+      "price": 590,
+      "change": 0.678,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:36:27.003Z"
+    },
+    {
+      "ticker": "VCN",
+      "name": "VICENNE",
+      "price": 348.5,
+      "change": 0,
+      "sector": "SANTÉ",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "ATH",
+      "name": "AUTO HALL",
+      "price": 66,
+      "change": 0.7634,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "EQD",
+      "name": "EQDOM",
+      "price": 1570,
+      "change": 0,
+      "sector": "SDFEAAF",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "OUL",
+      "name": "OULMES",
+      "price": 1155,
+      "change": 0,
+      "sector": "BOISS",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "MUT",
+      "name": "MUTANDIS SCA",
+      "price": 226.1,
+      "change": 0,
+      "sector": "AEP",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "UMR",
+      "name": "UNIMER",
+      "price": 177,
+      "change": 0,
+      "sector": "AEP",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "SAM",
+      "name": "SAMIR",
+      "price": 0,
+      "change": 0,
+      "sector": "PEG",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "NKL",
+      "name": "ENNAKL",
+      "price": 49.25,
+      "change": 1.0309,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:42:58.919Z"
+    },
+    {
+      "ticker": "DWY",
+      "name": "DISWAY",
+      "price": 778,
+      "change": 0,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:48:09.901Z"
+    },
+    {
+      "ticker": "SLF",
+      "name": "SALAFIN",
+      "price": 430,
+      "change": 0,
+      "sector": "SDFEAAF",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "AGM",
+      "name": "AGMA",
+      "price": 6700,
+      "change": 0,
+      "sector": "ASSUR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "PRO",
+      "name": "PROMOPHARM S.A.",
+      "price": 1339,
+      "change": 0,
+      "sector": "IP",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "MAB",
+      "name": "MAGHREBAIL",
+      "price": 929,
+      "change": 2.6406,
+      "sector": "SDFEAAF",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "COL",
+      "name": "COLORADO",
+      "price": 79,
+      "change": 1.2821,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "AFM",
+      "name": "AFMA",
+      "price": 1278,
+      "change": 1.4286,
+      "sector": "ASSUR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "MIC",
+      "name": "MICRODATA",
+      "price": 716.2,
+      "change": -3.2162,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "DRI",
+      "name": "DARI COUSPATE",
+      "price": 4060,
+      "change": -3.3333,
+      "sector": "AEP",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "SNA",
+      "name": "STOKVIS NORD AFRIQUE",
+      "price": 67,
+      "change": 0,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "CTM",
+      "name": "CTM",
+      "price": 880,
+      "change": 1.3825,
+      "sector": "TRANS",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "MLE",
+      "name": "MAROC LEASING",
+      "price": 365,
+      "change": 0,
+      "sector": "SDFEAAF",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "ALM",
+      "name": "ALUMINIUM DU MAROC",
+      "price": 1770,
+      "change": 0.0565,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T09:25:31.026Z"
+    },
+    {
+      "ticker": "IMO",
+      "name": "IMMORENTE INVEST",
+      "price": 90.9,
+      "change": -0.1653,
+      "sector": "SDPI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T13:43:20.427Z"
+    },
+    {
+      "ticker": "SNP",
+      "name": "SNEP",
+      "price": 312.1,
+      "change": -0.9206,
+      "sector": "CHIMI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "FBR",
+      "name": "FENIE BROSSETTE",
+      "price": 273.3,
+      "change": 2.0157,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "S2M",
+      "name": "S.M MONETIQUE",
+      "price": 453,
+      "change": -1.3072,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "DYT",
+      "name": "DISTY TECHNOLOGIES",
+      "price": 340,
+      "change": 0,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "BAL",
+      "name": "BALIMA",
+      "price": 191.2,
+      "change": 0,
+      "sector": "SDPI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "MOX",
+      "name": "MAGHREB OXYGENE",
+      "price": 370,
+      "change": 1.3699,
+      "sector": "CHIMI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "M2M",
+      "name": "M2M Group",
+      "price": 394,
+      "change": 2.6042,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "STR",
+      "name": "STROC INDUSTRIE",
+      "price": 187.4,
+      "change": 0.2675,
+      "sector": "IEBDEI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "ZDJ",
+      "name": "ZELLIDJA S.A",
+      "price": 267.25,
+      "change": 9.9794,
+      "sector": "SDPH",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "SRM",
+      "name": "REALISATIONS MECANIQUES",
+      "price": 459.9,
+      "change": 0,
+      "sector": "DISTR",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "MDP",
+      "name": "MED PAPER",
+      "price": 24.8,
+      "change": -2.7451,
+      "sector": "SEP",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "CRS",
+      "name": "CARTIER SAADA",
+      "price": 22.88,
+      "change": -0.5217,
+      "sector": "AEP",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "AFI",
+      "name": "AFRIC INDUSTRIES SA",
+      "price": 331.8,
+      "change": 1.6233,
+      "sector": "BEMDC",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "DLM",
+      "name": "DELATTRE LEVIVIER MAROC",
+      "price": 0,
+      "change": 0,
+      "sector": "IEBDEI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "INV",
+      "name": "INVOLYS",
+      "price": 126.65,
+      "change": -2.3516,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "DIS",
+      "name": "DIAC SALAF",
+      "price": 0,
+      "change": 0,
+      "sector": "SDFEAAF",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "IBC",
+      "name": "IB MAROC.COM",
+      "price": 60.98,
+      "change": -0.0328,
+      "sector": "MLESI",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    },
+    {
+      "ticker": "REB",
+      "name": "REBAB COMPANY",
+      "price": 91,
+      "change": 1.0662,
+      "sector": "MINES",
+      "currency": "MAD",
+      "updatedAt": "2026-08-03T08:49:07.111Z"
+    }
+  ],
+  "cursor": null,
+  "hasMore": false
+}

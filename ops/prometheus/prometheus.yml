@@ -1,0 +1,41 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    env: local
+    project: quantpulse
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # Spring Boot services running on the host (mvn spring-boot:run).
+  # host.docker.internal points back to the host, see extra_hosts in docker-compose.yml.
+  - job_name: qp-marketdata
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ["host.docker.internal:8081"]
+        labels:
+          service: qp-marketdata
+
+  - job_name: qp-portfolio
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ["host.docker.internal:8082"]
+        labels:
+          service: qp-portfolio
+
+  - job_name: qp-alerts
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ["host.docker.internal:8083"]
+        labels:
+          service: qp-alerts
+
+  - job_name: qp-api
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ["host.docker.internal:8080"]
+        labels:
+          service: qp-api

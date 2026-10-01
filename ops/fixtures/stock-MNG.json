@@ -1,0 +1,19 @@
+{
+  "id": 862,
+  "ticker": "MNG",
+  "name": "MANAGEM",
+  "isin": "MA0000012866",
+  "sector": "MINES",
+  "exchange": "Bourse de Casablanca",
+  "currency": "MAD",
+  "price": 1324,
+  "change": 0,
+  "marketCap": 158393424600,
+  "dividendYield": 0.86,
+  "peRatio": 25.29,
+  "beta": null,
+  "volume24h": 65341575.05263158,
+  "week52High": 1889.4,
+  "week52Low": 532.1,
+  "updatedAt": "2026-08-03T13:35:30.996Z"
+}

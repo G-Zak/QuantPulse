@@ -1,0 +1,35 @@
+{
+  "ticker": "ATW",
+  "range": "3M",
+  "signals": [
+    {
+      "name": "rsi_oversold",
+      "triggered": false,
+      "observedAt": "2026-08-03",
+      "why": "RSI(14)=49.38; threshold 30",
+      "inputs": {
+        "rsi14": 49.38261968292081,
+        "threshold": 30
+      }
+    },
+    {
+      "name": "rsi_overbought",
+      "triggered": false,
+      "observedAt": "2026-08-03",
+      "why": "RSI(14)=49.38; threshold 70",
+      "inputs": {
+        "rsi14": 49.38261968292081,
+        "threshold": 70
+      }
+    },
+    {
+      "name": "vol_spike",
+      "triggered": false,
+      "observedAt": "2026-08-03",
+      "why": "Rolling 20d vol=0.012532 vs 90th percentile of returns",
+      "inputs": {
+        "rollingVol20": 0.012531786259839788
+      }
+    }
+  ]
+}

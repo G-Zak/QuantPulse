@@ -1,0 +1,9 @@
+{
+  "ticker": "ATW",
+  "range": "3M",
+  "avgVolume": 13634791.203125,
+  "medianVolume": 10504033,
+  "volumeVolatility": 8650146.15972589,
+  "zeroVolumeDays": 15,
+  "amihudIlliquidity": 6.68312051903029e-10
+}

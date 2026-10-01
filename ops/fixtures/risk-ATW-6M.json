@@ -1,0 +1,20 @@
+{
+  "data": {
+    "ticker": "ATW",
+    "range": "6M",
+    "realizedVolAnnualized": 0.23392186541886184,
+    "downsideVolAnnualized": 0.16440326264446686,
+    "maxDrawdown": 0.12499999999999992,
+    "var95": 0.021957737410306565,
+    "cvar95": 0.03531430033845017,
+    "beta": 0.8752395352954727,
+    "alpha": -0.0809016246742251
+  },
+  "metadata": {
+    "asOfDate": "2026-08-03",
+    "dataDelay": "T+1D",
+    "dataQualityScore": 100,
+    "normalized": true,
+    "methodologyVersion": "1.0.0"
+  }
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "id": 8133,
+    "exDate": "2026-07-08",
+    "paymentDate": "2026-07-17",
+    "amount": 22,
+    "currency": "MAD"
+  },
+  {
+    "id": 6445,
+    "exDate": "2025-05-27",
+    "paymentDate": "2025-06-05",
+    "amount": 19,
+    "currency": "MAD"
+  },
+  {
+    "id": 6446,
+    "exDate": "2024-07-10",
+    "paymentDate": "2024-07-19",
+    "amount": 16.5,
+    "currency": "MAD"
+  },
+  {
+    "id": 6447,
+    "exDate": "2023-07-03",
+    "paymentDate": "2023-07-12",
+    "amount": 15.5,
+    "currency": "MAD"
+  },
+  {
+    "id": 6448,
+    "exDate": "2022-07-05",
+    "paymentDate": "2022-07-15",
+    "amount": 15,
+    "currency": "MAD"
+  },
+  {
+    "id": 6449,
+    "exDate": "2021-07-05",
+    "paymentDate": "2021-08-27",
+    "amount": 11,
+    "currency": "MAD"
+  },
+  {
+    "id": 6451,
+    "exDate": "2021-01-05",
+    "paymentDate": "2021-03-01",
+    "amount": 6.75,
+    "currency": "MAD"
+  },
+  {
+    "id": 6450,
+    "exDate": "2020-12-31",
+    "paymentDate": "2021-01-13",
+    "amount": 6.75,
+    "currency": "MAD"
+  },
+  {
+    "id": 6452,
+    "exDate": "2019-06-21",
+    "paymentDate": "2019-07-02",
+    "amount": 13,
+    "currency": "MAD"
+  },
+  {
+    "id": 6453,
+    "exDate": "2018-06-21",
+    "paymentDate": "2018-07-02",
+    "amount": 12.5,
+    "currency": "MAD"
+  },
+  {
+    "id": 6454,
+    "exDate": "2017-06-20",
+    "paymentDate": "2017-07-03",
+    "amount": 12,
+    "currency": "MAD"
+  },
+  {
+    "id": 6455,
+    "exDate": "2016-06-22",
+    "paymentDate": "2016-07-01",
+    "amount": 11,
+    "currency": "MAD"
+  },
+  {
+    "id": 6456,
+    "exDate": "2015-06-22",
+    "paymentDate": "2015-07-01",
+    "amount": 10,
+    "currency": "MAD"
+  },
+  {
+    "id": 6457,
+    "exDate": "2014-06-20",
+    "paymentDate": "2014-07-01",
+    "amount": 9.5,
+    "currency": "MAD"
+  },
+  {
+    "id": 6458,
+    "exDate": "2013-05-17",
+    "paymentDate": "2013-07-03",
+    "amount": 9,
+    "currency": "MAD"
+  },
+  {
+    "id": 6459,
+    "exDate": "2012-06-21",
+    "paymentDate": "2012-07-02",
+    "amount": 8.5,
+    "currency": "MAD"
+  }
+]

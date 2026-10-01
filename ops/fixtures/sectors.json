@@ -1,0 +1,127 @@
+[
+  {
+    "code": "AEP",
+    "name": "Agroalimentaire et Production",
+    "count": 6
+  },
+  {
+    "code": "ASSUR",
+    "name": "Assurances",
+    "count": 5
+  },
+  {
+    "code": "BANQU",
+    "name": "Banques",
+    "count": 7
+  },
+  {
+    "code": "BEMDC",
+    "name": "Bâtiment et Matériaux de Construction",
+    "count": 9
+  },
+  {
+    "code": "BOISS",
+    "name": "Boissons",
+    "count": 2
+  },
+  {
+    "code": "CHIMI",
+    "name": "Chimie",
+    "count": 2
+  },
+  {
+    "code": "DISTR",
+    "name": "Distributeurs",
+    "count": 7
+  },
+  {
+    "code": "ELECT",
+    "name": "Electricité",
+    "count": 1
+  },
+  {
+    "code": "IA",
+    "name": "Industrie Agricole",
+    "count": 1
+  },
+  {
+    "code": "IEBDEI",
+    "name": "Ingénieries et Biens d'Equipement Industriels",
+    "count": 2
+  },
+  {
+    "code": "IP",
+    "name": "Industrie Pharmaceutique",
+    "count": 2
+  },
+  {
+    "code": "LEH",
+    "name": "Loisirs et Hôtels",
+    "count": 1
+  },
+  {
+    "code": "MINES",
+    "name": "Mines",
+    "count": 4
+  },
+  {
+    "code": "MLESI",
+    "name": "Matériels, Logiciels et Services Informatiques",
+    "count": 8
+  },
+  {
+    "code": "PEG",
+    "name": "Pétrole et Gaz",
+    "count": 3
+  },
+  {
+    "code": "PEPI",
+    "name": "Participation et promotion immobilières",
+    "count": 3
+  },
+  {
+    "code": "SANTÉ",
+    "name": "Santé",
+    "count": 3
+  },
+  {
+    "code": "SDFEAAF",
+    "name": "Sociétés de financement et Autres Activités Financières",
+    "count": 6
+  },
+  {
+    "code": "SDPH",
+    "name": "Sociétés de Portefeuilles / Holdings",
+    "count": 2
+  },
+  {
+    "code": "SDPI",
+    "name": "Sociétés de placement immobilier",
+    "count": 3
+  },
+  {
+    "code": "SDT",
+    "name": "Services de transport",
+    "count": 1
+  },
+  {
+    "code": "SEP",
+    "name": "Sylviculture et Papier",
+    "count": 1
+  },
+  {
+    "code": "TRANS",
+    "name": "Transport",
+    "count": 1
+  },
+  {
+    "code": "TÉLÉC",
+    "name": "Télécommunications",
+    "count": 1
+  },
+  {
+    "code": "UNKNOWN",
+    "name": "Unknown",
+    "count": 0
+  }
+]

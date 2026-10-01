@@ -1,0 +1,16 @@
+{
+  "asOfDate": "2025-12-31",
+  "availablePeriods": {
+    "QUARTERLY": [],
+    "ANNUAL": [
+      "2022-12-31",
+      "2023-12-31",
+      "2024-12-31",
+      "2025-12-31"
+    ]
+  },
+  "latestPeriodEnd": {
+    "QUARTERLY": null,
+    "ANNUAL": "2025-12-31"
+  }
+}

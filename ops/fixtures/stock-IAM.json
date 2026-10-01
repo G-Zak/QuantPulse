@@ -1,0 +1,19 @@
+{
+  "id": 849,
+  "ticker": "IAM",
+  "name": "ITISSALAT AL-MAGHRIB",
+  "isin": "MA0000011488",
+  "sector": "TÉLÉC",
+  "exchange": "Bourse de Casablanca",
+  "currency": "MAD",
+  "price": 93.65,
+  "change": 0,
+  "marketCap": 81755866620,
+  "dividendYield": 3.67,
+  "peRatio": 13.75,
+  "beta": null,
+  "volume24h": 5618779.666666667,
+  "week52High": 130,
+  "week52Low": 0,
+  "updatedAt": "2026-08-03T13:40:26.612Z"
+}

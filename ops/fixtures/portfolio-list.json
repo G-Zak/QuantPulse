@@ -1,0 +1,14 @@
+{
+  "portfolios": [
+    {
+      "id": "19f6c701-bba7-4171-a965-58f43cf76f18",
+      "name": "Portefeuille principal",
+      "description": null,
+      "baseCurrency": "MAD",
+      "isDefault": false,
+      "value": 0,
+      "positionsCount": 0,
+      "createdAt": "2026-08-03T14:08:29.961Z"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: qp-portfolio
+  profiles:
+    default: dev
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5434}/${POSTGRES_DB:quantpulse}
+    username: ${PORTFOLIO_DB_USER:qp_portfolio}
+    password: ${PORTFOLIO_DB_PASSWORD:qp_portfolio_dev}
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 5000
+      pool-name: qp-portfolio-pool
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: portfolio
+        jdbc:
+          time_zone: UTC
+          batch_size: 50
+
+  flyway:
+    enabled: true
+    schemas: portfolio
+    default-schema: portfolio
+    baseline-on-migrate: true
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6380}
+      timeout: 2s
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:quantpulse}
+    password: ${RABBITMQ_PASSWORD:qp_local_dev}
+    listener:
+      simple:
+        acknowledge-mode: auto  # ack when the listener returns, reject on exception
+        prefetch: 10
+        default-requeue-rejected: false  # rejected messages go to the DLX, not back in the queue
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 1s
+          multiplier: 2
+          max-interval: 10s
+
+quantpulse:
+  marketdata:
+    base-url: ${MARKETDATA_URL:http://localhost:8081}
+  portfolio:
+    # WEIGHTED_AVERAGE or FIFO. Changes realised P&L, so it's a business choice.
+    cost-basis-method: WEIGHTED_AVERAGE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: qp-portfolio
+
+logging:
+  level:
+    com.quantpulse: INFO

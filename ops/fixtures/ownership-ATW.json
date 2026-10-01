@@ -1,0 +1,82 @@
+{
+  "asOfDate": "2022-09-02",
+  "page": 1,
+  "pageSize": 10,
+  "totalItems": 11,
+  "totalPages": 2,
+  "items": [
+    {
+      "name": "AL MADA",
+      "sharePercent": 46.54
+    },
+    {
+      "name": "WAFA ASSURANCE",
+      "sharePercent": 6.32
+    },
+    {
+      "name": "Groupe MCMA-MAMDA",
+      "sharePercent": 6.15
+    },
+    {
+      "name": "RCAR",
+      "sharePercent": 5.71
+    },
+    {
+      "name": "SANTUSA HOLDING",
+      "sharePercent": 5.1
+    },
+    {
+      "name": "CIMR",
+      "sharePercent": 4.11
+    },
+    {
+      "name": "CAISSE MAROCAINE DE RETRAITE (CMR)",
+      "sharePercent": 2.41
+    },
+    {
+      "name": "Personnel",
+      "sharePercent": 2.17
+    },
+    {
+      "name": "RMA WATANYA",
+      "sharePercent": 0.95
+    },
+    {
+      "name": "CDG (Caisse de Dépôt et de Gestion)",
+      "sharePercent": 0.65
+    }
+  ],
+  "topHoldersForBar": [
+    {
+      "name": "AL MADA",
+      "sharePercent": 46.54
+    },
+    {
+      "name": "WAFA ASSURANCE",
+      "sharePercent": 6.32
+    },
+    {
+      "name": "Groupe MCMA-MAMDA",
+      "sharePercent": 6.15
+    },
+    {
+      "name": "RCAR",
+      "sharePercent": 5.71
+    },
+    {
+      "name": "SANTUSA HOLDING",
+      "sharePercent": 5.1
+    },
+    {
+      "name": "CIMR",
+      "sharePercent": 4.11
+    }
+  ],
+  "floatPercent": 19.56,
+  "top1Percent": 46.54,
+  "top3Percent": 59.01,
+  "top5Percent": 69.82,
+  "totalKnownPercent": 80.44,
+  "previousAsOfDate": null,
+  "warning": null
+}

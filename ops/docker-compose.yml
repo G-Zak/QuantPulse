@@ -1,0 +1,111 @@
+# Local infrastructure.
+#
+# Host ports are shifted because 5432, 5433 and 6379 are already used on my machine.
+#
+#   Postgres   localhost:5434
+#   RabbitMQ   localhost:5672   (management UI localhost:15672)
+#   Redis      localhost:6380
+#   Prometheus localhost:9090
+#   Grafana    localhost:3001   (3000 is the Next.js app)
+
+name: quantpulse
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: qp-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-quantpulse}
+      POSTGRES_USER: ${POSTGRES_ADMIN_USER:-quantpulse}
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:-qp_local_dev}
+      # Same collation everywhere so ORDER BY ticker gives the same result.
+      POSTGRES_INITDB_ARGS: "--locale=C --encoding=UTF8"
+    ports:
+      - "5434:5432"
+    volumes:
+      - qp-pgdata:/var/lib/postgresql/data
+      # These scripts only run on the first init.
+      # After changing them, run `docker compose down -v`.
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_ADMIN_USER:-quantpulse} -d ${POSTGRES_DB:-quantpulse}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    container_name: qp-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-quantpulse}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-qp_local_dev}
+    ports:
+      - "5672:5672"     # AMQP
+      - "15672:15672"   # management UI
+    volumes:
+      - qp-rabbitdata:/var/lib/rabbitmq
+    healthcheck:
+      # check_running says healthy too early; check_port_connectivity waits until the broker accepts connections.
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "check_port_connectivity"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 20s
+
+  redis:
+    image: redis:7-alpine
+    container_name: qp-redis
+    restart: unless-stopped
+    # Cache only, everything can be rebuilt from Postgres, so no persistence.
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru"]
+    ports:
+      - "6380:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  prometheus:
+    image: prom/prometheus:v3.4.1
+    container_name: qp-prometheus
+    restart: unless-stopped
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.retention.time=15d"
+      - "--web.enable-lifecycle"
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - qp-promdata:/prometheus
+    extra_hosts:
+      # So Prometheus can scrape services running on the host.
+      - "host.docker.internal:host-gateway"
+
+  grafana:
+    image: grafana/grafana:12.0.2
+    container_name: qp-grafana
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-qp_local_dev}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - qp-grafanadata:/var/lib/grafana
+    depends_on:
+      - prometheus
+
+volumes:
+  qp-pgdata:
+  qp-rabbitdata:
+  qp-promdata:
+  qp-grafanadata:

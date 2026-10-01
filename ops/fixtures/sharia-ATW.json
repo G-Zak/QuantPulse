@@ -1,0 +1,21 @@
+{
+  "status": "NON_COMPLIANT",
+  "reasons": [
+    {
+      "code": "PROHIBITED_SECTOR",
+      "message": "Secteur interdit: Banques",
+      "severity": "error"
+    }
+  ],
+  "dataFreshness": {
+    "date": "2026-08-03",
+    "fiscalYear": 2025,
+    "source": "ANNUAL"
+  },
+  "confidenceScore": 100,
+  "businessActivity": {
+    "sector": "Banques",
+    "sectorCode": "BANQU",
+    "classification": "PROHIBITED"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "Realtime Currency Exchange Rate": {
+        "1. From_Currency Code": "EUR",
+        "2. From_Currency Name": "Euro",
+        "3. To_Currency Code": "MAD",
+        "4. To_Currency Name": "Moroccan Dirham",
+        "5. Exchange Rate": "10.73120000",
+        "6. Last Refreshed": "2026-09-25 21:59:00",
+        "7. Time Zone": "UTC",
+        "8. Bid Price": "10.72880000",
+        "9. Ask Price": "10.73360000"
+    }
+}
